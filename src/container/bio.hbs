@@ -125,7 +125,13 @@
 <br>
 <div>
     {{> title data="Contributions" big=true}}
-    <b>{{contributions.field}}</b>
+    {{> title data=contributions.title}}
+
     <br>
-    <blockquote>{{contributions.year}} {{contributions.description}}</blockquote>
+    <blockquote>
+        <b>{{contributions.field}}</b>
+        <br>
+        <br>
+        {{contributions.year}} {{contributions.description}}
+    </blockquote>
 </div>
