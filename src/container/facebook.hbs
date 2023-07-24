@@ -1,0 +1,88 @@
+<div>
+    <h1>{{name}}</h1>
+</div>
+<hr>
+<div>
+    {{#each users}}
+    {{> title data=name big=true}}
+    <b>ID:</b> {{id}}
+    <br>
+    <b>Gender:</b> {{gender}}
+    <br>
+    <b>Age:</b> {{age}}
+    <hr>
+    {{> title data="Friends"}}
+    {{#each friends}}
+    <button type="button" class="btn btn-link">{{> title data=name}}</button>
+    <br>
+    <b>ID:</b> {{id}}
+    <br>
+    <b>Gender:</b> {{gender}}
+    <br>
+    <b>Age:</b> {{age}}
+    <br>
+    <br>
+    {{> title data="Groups"}}
+    {{#each groups}}
+    <b>Name:</b> <button type="button" class="btn btn-link">{{name}}</button>
+    <br>
+    <b>ID:</b> {{id}}
+    <br>
+    {{description}}
+    <br>
+    <ul>
+        {{#each members}}
+        <li>
+            <button type="button" class="btn btn-link">{{name}}</button>
+            <br>
+            <b>ID:</b> {{id}}
+            <br>
+            <b>Gender:</b> {{gender}}
+            <br>
+            <b>Age:</b> {{age}}
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <b><em>User isn't a member of groups</em></b>
+    {{/each}}
+    <hr>
+    {{> title data="Mutual friends"}}
+    {{#each mutual_friends}}
+    <button type="button" class="btn btn-link">{{name}}</button>
+    <br>
+    <b>ID:</b> {{id}}
+    <br>
+    <b>Gender:</b> {{gender}}
+    <br>
+    <b>Age:</b> {{age}}
+    <hr>
+    {{/each}}
+    {{/each}}
+    {{> title data="Groups"}}
+    {{#each groups}}
+    <b>Name:</b> <button type="button" class="btn btn-link">{{name}}</button>
+    <br>
+    <b>ID:</b> {{id}}
+    <br>
+    {{description}}
+    <br>
+    <ul>
+        {{#each members}}
+        <li>
+            <button type="button" class="btn btn-link">{{name}}</button>
+            <br>
+            <b>ID:</b> {{id}}
+            <br>
+            <b>Gender:</b> {{gender}}
+            <br>
+            <b>Age:</b> {{age}}
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <b><em>User isn't a member of groups</em></b>
+    {{/each}}
+    <hr>
+    {{/each}}
+</div>
