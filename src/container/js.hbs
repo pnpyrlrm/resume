@@ -1,0 +1,122 @@
+<div>
+    <h1>{{name}}</h1>
+</div>
+<br>
+<div>
+    <em>{{description}}</em>
+</div>
+<br>
+<br>
+<div>
+    <b>Year:</b> {{history.year}}
+    <br>
+    <b>Founder:</b> {{history.founder}}
+</div>
+<hr>
+{{> title data="Types" big=true}}
+<div>
+    <ul>
+        {{#each types}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<hr>
+{{> title data="Syntax" big=true}}
+<div>
+    <ul>
+        {{> title data="Variables"}}
+        {{#each syntax.variables}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<div>
+    <ul>
+        {{> title data="Functions"}}
+        {{#each syntax.functions}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<div>
+    <ul>
+        {{> title data="Conditionals"}}
+        {{#each syntax.conditionals}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<div>
+    <ul>
+        {{> title data="Loops"}}
+        {{#each syntax.loops}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<div>
+    <ul>
+        {{> title data="Classes"}}
+        {{#each syntax.classes}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+{{> title data="Features" big=true}}
+<div>
+    <ul>
+        {{#each features}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<hr>
+{{> title data="Libraries" big=true}}
+<div>
+    <ul>
+        {{#each libraries}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<hr>
+{{> title data="Tools" big=true}}
+<div>
+    <ul>
+        {{#each tools}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<hr>
+<br>
+{{> title data="Community" big=true}}
+<div>
+    <ul>
+        {{#each community}}
+        <br>
+        <li>
+            <button type="button" class="btn btn-link">{{name}}</button>
+            <br>
+            <b>Type:</b> {{type}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
