@@ -1,22 +1,6 @@
 <main class="ps-5">
     <div class="row">
-        <div class="card col-12 mb-5">
-            <div class="row">
-                <div class="card-body">
-                    {{#each navigation.links}}
-                    <div class="nav">
-                        <div class="nav-item col-6">
-                            <a href="{{href}}" class="nav-link">{{text}}</a>
-                        </div>
-                        {{/each}}
-                        <div class="nav-item col-6">
-                            <a href="#" class="nav-link disabled">Profile</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
+        <div>{{> navShop data="Profile"}}</div>
         <div>
             <h1 class="my-4">{{header}}</h1>
         </div>

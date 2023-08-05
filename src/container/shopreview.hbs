@@ -1,0 +1,75 @@
+<main class="ps-5">
+    <div class="row">
+        <div class="mb-5">{{> navShop data="Review"}}</div>
+        {{#with formBlock}}
+        <div class="col-8">
+            <h1 class="mb-4">{{header}}</h1>
+            <p>{{rating.title}}: {{rating.value}}</p>
+            {{#with actionBlock}}
+            <div class="nav nav-tabs">
+                <div class="row">
+                    {{#each tabs}}
+                    <div class="col-4">
+                        <div class=" nav-item">
+                            <a href="#" class="nav-link {{#if isActive}}active{{/if}} mx-4"><b>{{text}}</b></a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="card">
+                <div class="card-body">
+                    {{#with report}}
+                    <h6>{{title}}</h6>
+                    <a href="{{button.link}}" class="btn btn-secondary">{{button.text}}</a>
+                    {{/with}}
+                </div>
+            </div>
+            <hr class="my-5">
+            {{/with}}
+            {{#with feedbackBlock}}
+            <h2 class="mb-5">{{title}}</h2>
+            {{#each buttons}}
+            <a href="{{link}}"
+                class="{{#if isWarning}}btn btn-warning{{/if}} {{#if isSuccess}}btn btn-success{{/if}} {{#if isDanger}}btn btn-danger{{/if}} col-3 me-5">{{text}}</a>
+            {{/each}}
+            {{/with}}
+        </div>
+        <div class="col-4">
+            {{#with goodsInfo}}
+            <div class="card">
+                <img src="{{photo}}" alt="{{name}}">
+                <h4 class="p-2">{{name}}</h4>
+            </div>
+            <div class="card my-3 p-2">
+                <h5>{{price}}</h5>
+                {{#if inMarket}}Є в наявності{{/if}}
+                {{#each buttons}}
+                <a href="{{link}}"
+                    class="{{#if isPrimary}}btn btn-primary{{/if}} {{#if isSecondary}}btn btn-secondary{{/if}} mt-2">{{text}}</a>
+                {{/each}}
+            </div>
+            <div class="card p-2">
+                {{seller.title}}: {{seller.value}}
+            </div>
+            {{/with}}
+        </div>
+        {{/with}}
+        <hr class="my-5">
+        {{> reviewItem}}
+        <div class="card text-bg-success text-center">
+            {{#with service}}
+            <div class="card-body">
+                <h2 class="card-title">{{title}}</h2>
+                <p>{{description}}</p>
+                {{#each buttons}}
+                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+        <hr class="my-5">
+        {{> footerShop}}
+    </div>
+</main>

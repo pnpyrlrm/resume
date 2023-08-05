@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="card col-12 mb-5">
+        <div class="row">
+            <div class="card-body">
+                {{#each navigation.links}}
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="{{href}}" class="nav-link">{{text}}</a>
+                    </div>
+                    {{/each}}
+                    <div class="nav-item">
+                        <a href="#" class="nav-link disabled">{{data}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

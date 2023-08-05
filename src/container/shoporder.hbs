@@ -1,22 +1,6 @@
 <main class="p-5">
     <div class="row g-5">
-        <div class="card col-12">
-            <div class="card-body">
-                {{#each navigation.links}}
-                <div class="nav">
-                    {{#if href}}
-                    <div class="nav-item">
-                        <a href="{{href}}" class="nav-link">{{text}}</a>
-                    </div>
-                    {{else}}
-                    <div class="nav-item">
-                        <a href="{{href}}" class="nav-link disabled">{{text}}</a>
-                    </div>
-                    {{/if}}
-                </div>
-                {{/each}}
-            </div>
-        </div>
+        {{> navShop}}
         <div class="col-12 py-5">
             <h1>{{header}}</h1>
         </div>
@@ -299,23 +283,6 @@
         <div>
             <hr class="my-2">
         </div>
-        <div class="col-12">
-            <div class="row">
-                <div class="nav">
-                    {{#each footer.[0]}}
-                    <a href="{{link}}" class="nav-link col-3">{{text}}</a>
-                    {{/each}}
-                    {{#each footer.[1]}}
-                    <a href="{{link}}" class="nav-link col-3">{{text}}</a>
-                    {{/each}}
-                    {{#each footer.[2]}}
-                    <a href="{{link}}" class="nav-link col-3">{{text}}</a>
-                    {{/each}}
-                    {{#each footer.[3]}}
-                    <a href="{{link}}" class="nav-link disabled col-3">{{text}}</a>
-                    {{/each}}
-                </div>
-            </div>
-        </div>
+        <div>{{> footerShop}}</div>
     </div>
 </main>

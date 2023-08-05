@@ -1,18 +1,6 @@
 <main class="ps-5">
-    <hr>
     <div class="row">
-        <div class="col-12 mb-5">
-            {{#each navigation.links}}
-            <div class="nav">
-                <div class="nav-item">
-                    <a href="{{href}}" class="nav-link">{{text}}</a>
-                </div>
-                {{/each}}
-                <div class="nav-item">
-                    <a href="#" class="nav-link disabled">News</a>
-                </div>
-            </div>
-        </div>
+        <div>{{> navShop data="News"}}</div>
         <div class="py-5">
             {{#with newsBlock}}
             <h2 class="text-center my-3">{{title}}</h2>
