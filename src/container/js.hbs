@@ -1,136 +1,126 @@
-<div>
+<main class="ps-5">
     <h1>{{name}}</h1>
-</div>
-<br>
-<div>
-    <em>{{description}}</em>
-</div>
-<br>
-<br>
-<div>
-    <b>Year:</b> {{history.year}}
-    <br>
-    <b>Founder:</b> {{history.founder}}
-</div>
-<hr>
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Menu
-    </button>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Types</a></li>
-        <li><a class="dropdown-item" href="#">Syntax</a></li>
-        <li><a class="dropdown-item" href="#">Features</a></li>
-        <li><a class="dropdown-item" href="#">Libraries</a></li>
-        <li><a class="dropdown-item" href="#">Tools</a></li>
-        <li><a class="dropdown-item" href="#">Community</a></li>
-    </ul>
-</div>
-<hr>
-{{> title data="Types" big=true}}
-<div>
-    <ul>
-        {{#each types}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-</div>
-<hr>
-{{> title data="Syntax" big=true}}
-<div>
-    <ul>
-        {{> title data="Variables"}}
-        {{#each syntax.variables}}
-        <li>
-            {{this}}
-        </li>
-        {{/each}}
-    </ul>
-</div>
-<br>
-<div>
-    <ul>
-        {{> title data="Functions"}}
-        {{#each syntax.functions}}
-        <li>
-            {{this}}
-        </li>
-        {{/each}}
-    </ul>
-</div>
-<br>
-<div>
-    <ul>
-        {{> title data="Conditionals"}}
-        {{#each syntax.conditionals}}
-        <li>
-            {{this}}
-        </li>
-        {{/each}}
-    </ul>
-</div>
-<br>
-<div>
-    <ul>
-        {{> title data="Loops"}}
-        {{#each syntax.loops}}
-        <li>
-            {{this}}
-        </li>
-        {{/each}}
-    </ul>
-</div>
-<br>
-<div>
-    <ul>
-        {{> title data="Classes"}}
-        {{#each syntax.classes}}
-        <li>
-            {{this}}
-        </li>
-        {{/each}}
-    </ul>
-</div>
-<br>
-<hr>
-{{> title data="Features" big=true}}
-<div>
-    <ul>
-        {{#each features}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-</div>
-<hr>
-{{> title data="Libraries" big=true}}
-<div>
-    <ul>
-        {{#each libraries}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-</div>
-<hr>
-{{> title data="Tools" big=true}}
-<div>
-    <ul>
-        {{#each tools}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-</div>
-<hr>
-<br>
-{{> title data="Community" big=true}}
-<div>
-    <ul>
-        {{#each community}}
+    <div class="my-4">
+        <em>{{description}}</em>
+    </div>
+    <div>
+        <b>Year:</b> {{history.year}}
         <br>
-        <li>
-            <button type="button" class="btn btn-link">{{name}}</button>
-            <br>
-            <b>Type:</b> {{type}}
-        </li>
-        {{/each}}
-    </ul>
-</div>
+        <b>Founder:</b> {{history.founder}}
+    </div>
+    <hr>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Types</a></li>
+            <li><a class="dropdown-item" href="#">Syntax</a></li>
+            <li><a class="dropdown-item" href="#">Features</a></li>
+            <li><a class="dropdown-item" href="#">Libraries</a></li>
+            <li><a class="dropdown-item" href="#">Tools</a></li>
+            <li><a class="dropdown-item" href="#">Community</a></li>
+        </ul>
+    </div>
+    <hr>
+    {{> title data="Types" big=true}}
+    <div>
+        <ul>
+            {{#each types}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    {{> title data="Syntax" big=true}}
+    <div>
+        <ul>
+            {{> title data="Variables"}}
+            {{#each syntax.variables}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <ul>
+            {{> title data="Functions"}}
+            {{#each syntax.functions}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <ul>
+            {{> title data="Conditionals"}}
+            {{#each syntax.conditionals}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <ul>
+            {{> title data="Loops"}}
+            {{#each syntax.loops}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <ul>
+            {{> title data="Classes"}}
+            {{#each syntax.classes}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    {{> title data="Features" big=true}}
+    <div>
+        <ul>
+            {{#each features}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    {{> title data="Libraries" big=true}}
+    <div>
+        <ul>
+            {{#each libraries}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    {{> title data="Tools" big=true}}
+    <div>
+        <ul>
+            {{#each tools}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    <br>
+    {{> title data="Community" big=true}}
+    <div>
+        <ul>
+            {{#each community}}
+            <li class="mt-3">
+                <button type="button" class="btn btn-link">{{name}}</button>
+                <br>
+                <b>Type:</b> {{type}}
+            </li>
+            {{/each}}
+        </ul>
+</main>
