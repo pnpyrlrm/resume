@@ -1,69 +1,66 @@
-{{#with program}}
-<div>
-    {{#with excursion}}
-    {{> title data=name big=true}}
-    <b><em>{{location.city}}, {{location.country}}</em></b>
-    <br>
-    <br>
-    <b>Date:</b> {{date}}
-    <hr>
-    <br>
-    {{#each program}}
-    {{> title data=name }}
-    <b>Type:</b> {{type}}
-    <br>
-    <b>Duration:</b> {{duration}}
-    <br>
-    <br>
-    {{#with details.museum}}
-    <b>Museum:</b> {{name}}
-    ({{location.address}},
-    {{location.city}},
-    {{location.country}})
-    <ul>
-        {{#each exhibits}}
+<main class="ps-5">
+    {{#with program}}
+    <div>
+        {{#with excursion}}
+        {{> title data=name big=true}}
+        <b><em>{{location.city}}, {{location.country}}</em></b>
         <br>
-        <li>
-            <b>Name:</b> {{name}}
-            <br>
-            <b>Artist:</b> {{artist}}
-            <br>
-            <b>Description:</b> <q>{{description}}</q>
-            <br>
-            <b>Audio guide:</b> {{audio_guide}}
-        </li>
-        {{/each}}
-    </ul>
-    {{/with}}
-    <ul>
-        {{#with details.venue}}
-        {{> title data="Venue"}}
-        <li>
-            <b>Name:</b> {{name}}
-            ({{location.address}},
-            {{location.city}},
-            {{location.country}})
-        </li>
+        <b>Date:</b> {{date}}
+        <hr>
+        {{#each program}}
+        {{> title data=name }}
+        <b>Type:</b> {{type}}
         <br>
+        <b>Duration:</b> {{duration}}
+        <br>
+        {{#with details.museum}}
+        <b>Museum:</b> {{name}}
+        ({{location.address}},
+        {{location.city}},
+        {{location.country}})
+        <ul>
+            {{#each exhibits}}
+            <li class="my-3">
+                <b>Name:</b> {{name}}
+                <br>
+                <b>Artist:</b> {{artist}}
+                <br>
+                <b>Description:</b> <q>{{description}}</q>
+                <br>
+                <b>Audio guide:</b> {{audio_guide}}
+            </li>
+            {{/each}}
+        </ul>
         {{/with}}
-    </ul>
-    <ul>
-        {{> title data="Performers"}}
-        {{#each details.performers}}
+        <ul>
+            {{#with details.venue}}
+            <div class="mt-3">{{> title data="Venue"}}</div>
+            <li>
+                <b>Name:</b> {{name}}
+                ({{location.address}},
+                {{location.city}},
+                {{location.country}})
+            </li>
+            <br>
+            {{/with}}
+        </ul>
+        <ul>
+            {{> title data="Performers"}}
+            {{#each details.performers}}
+            <li>
+                <b>Name:</b> {{name}}
+                ({{type}})
+            </li>
+            {{/each}}
+        </ul>
+        {{#with details.guide}}
+        <b>Guide:</b> {{name}} ({{rating}})
         <br>
-        <li>
-            <b>Name:</b> {{name}}
-            ({{type}})
-        </li>
+        <b>Language:</b> {{language}}
+        <hr>
+        {{/with}}
         {{/each}}
-    </ul>
-    {{#with details.guide}}
-    <b>Guide:</b> {{name}} ({{rating}})
-    <br>
-    <b>Language:</b> {{language}}
-    <hr>
+        {{/with}}
+    </div>
     {{/with}}
-    {{/each}}
-    {{/with}}
-</div>
-{{/with}}
+</main>

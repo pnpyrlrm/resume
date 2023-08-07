@@ -1,20 +1,17 @@
-<div>
+<main class="p-5">
     {{#with person}}
     <div>
         <h1>{{name}}</h1>
     </div>
-    <br>
     <div>
         <em>{{age}}, {{gender}}</em>
     </div>
-    <br>
     <div>
         {{#with address}}
         <em>{{street}}, {{city}}, {{state}}, {{zip}}, {{country}}</em>
         {{/with}}
     </div>
-    <hr>
-    <br>
+    <hr class="mb-5">
     <div>
         {{#each education}}
         {{> title data="My education" big=true}}
@@ -27,14 +24,11 @@
         <b>Graduated:</b> {{graduationYear}}
         {{/each}}
     </div>
-    <hr>
-    <br>
+    <hr class="my-5">
     <div>
         {{#each workExperience}}
-        {{> title data="My work-experience" big=true}}
-        <b>{{title}}</b>
-        <br>
-        <br>
+        <div class="mb-5">{{> title data="My work-experience" big=true}}</div>
+        <h4 class="mb-5">{{title}}</h4>
         <b>Company:</b> {{company}}
         <br>
         <b>{{startDate}} - {{endDate}}</b>
@@ -45,54 +39,45 @@
             <li>{{this}}</li>
             {{/each}}
         </ul>
-        <br>
         <b>Year founded:</b> {{year_founded}}
         <br>
         <b>Industry:</b> {{industry}}
-        <br>
-        <br>
-        {{> title data="Employees:"}}
+        <div class="mb-4 mt-5">{{> title data="Employees:"}}</div>
         {{#each employees}}
         <b>Name:</b> {{name}}
         <br>
         <b>Position:</b> {{position}}
         <br>
         <b>Department:</b> {{department}}
-        <br>
-        <br>
-        {{> title data="Projects:"}}
+        <div class="mb-4 mt-5">{{> title data="Projects:"}}</div>
         {{#each projects}}
         <b>Name:</b> {{name}}
         <br>
         <b>Description:</b> <q>{{description}}</q>
         <br>
         <b>Status:</b> {{status}}
-        <br>
-        <br>
-        {{> title data="Teams:"}}
+        <div class="mb-4 mt-5">{{> title data="Teams:"}}</div>
         {{#each teams}}
         <b>Team name:</b> {{team_name}}
         <br>
         <b>{{team_leader.title}}:</b> {{team_leader.name}}
         <br>
         <b>Email:</b> {{team_leader.email}}
-        <br>
-        {{> title data="Team members:"}}
+        <div class="mb-4 mt-5">{{> title data="Team members:"}}</div>
         {{#each team_members}}
         <b>Name:</b> {{name}} <em>({{title}})</em>
         <br>
         <b>Email:</b> {{email}}
         <br>
         <b>Skills:</b> {{skills}}
-        {{> title data="Projects:"}}
+        <div class="mb-4 mt-5">{{> title data="Projects:"}}</div>
         {{#each projects}}
         <b>Name:</b> {{name}}
         <br>
         <b>Description:</b> <q>{{description}}</q>
         <br>
         <b>Technologies:</b> {{technologies}}
-        <br>
-        {{> title data="Team members:"}}
+        <div class="mb-4 mt-5">{{> title data="Team members:"}}</div>
         <ul>
             {{#each team_members}}
             <li><b>Name:</b> {{name}} <em>({{title}})</em></li>
@@ -106,4 +91,4 @@
         {{/each}}
     </div>
     {{/with}}
-</div>
+</main>
